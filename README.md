@@ -21,7 +21,7 @@ This repository is made to help students of the MAS DSE 201 course offered in Wi
 ### Windows
 1. Download [Postgresql 9.4](http://www.enterprisedb.com/products-services-training/pgdownload#windows) 
 2. Click Next
- ![alt tag](./images/windows/1.jpg)
+ ![alt tag](./images/windows/1.jpg))
 3. Click Next
 ![alt tag](./images/windows/2.jpg)
 4. Provide password (e.g. postgres)
