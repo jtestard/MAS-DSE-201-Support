@@ -12,7 +12,7 @@ This repository is made to help students of the MAS DSE 201 course offered in Wi
 
 ### Linux (Ubuntu)
 
-1. The first step is to install postgres with the following PostgreSQL as follows : run `sudo apt-get install postgresql` on the terminal. Verify that the installed version of PostgreSQL will be 9.3 or 9.4 (this should be the case by default). Any of the two should be fine. 
+1. The first step is to install postgres with the following PostgreSQL as follows : run `sudo apt-get install postgresql` on the terminal. Verify that the installed version of PostgreSQL. The version number shouldn't matter as long as it's fairly recent (version 9.0+).
 2. Run `sudo -u postgres createuser -s <username>` on the terminal. By default, the PostgreSQL installation will install a user called `postgres` which will have the administrator role (highest level of privilege). In our case, it is OK to have our own user be a super user as well. This command creates a new user (which bears our own name) and gives it administrator powers.
 3. Run `createdb <username>` on the terminal. This will create a database whose name is the same as our own name.
 4. Run `psql` on the terminal and you will have a client session to your database. Note that `psql` is a shorthand for `psql -U <username> -d <username>`, which means "create a client connection to the database \<username> as user \<username>".
