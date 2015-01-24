@@ -2,7 +2,7 @@
 This repository is made to help students of the MAS DSE 201 course offered in Winter 2015 at UCSD. It contains documentation on software required for the course.
 
 
-## Install PostgreSQL
+## 1. Install PostgreSQL
 
 ### Mac OS X
 
@@ -40,3 +40,33 @@ This repository is made to help students of the MAS DSE 201 course offered in Wi
 ![alt tag](./images/windows/10.jpg)
 11. Double click on PostgresSQL 9.4 and put in the password for user postgres
 ![alt tag](./images/windows/11.jpg)
+
+
+## 2. Setup a simple database
+
+At this point we assume you have logged into PostgreSQL through `psql` (see section 1 for PostgreSQL installation for your system).
+
+## 2.1 Loading data
+
+Please download and unzip the [sql.zip](sql.zip) at a convenient location on your system. To load data from sql within `psql`, do the following (in Linux or MacOS):
+
+	psql> \i <path_to_location>/sql/create_tables_enrollment.sql 
+	psql> \i <path_to_location>/sql/create_tables_movie.sql
+	
+Do the following (in Windows):
+	
+	psql> \i <path_to_location>\sql\create_tables_enrollment.sql
+	psql> \i <path_to_location>\sql\create_tables_movie.sql
+
+
+## 2.2 Running Queries
+
+To run a few example queries, do the following (in Linux or MacOS):
+
+	psql> \i <path_to_location>/sql/run_queries_enrollment.sql 
+	psql> \i <path_to_location>/sql/run_queries_movie.sql
+
+Do the following (in Windows):
+	
+	psql> \i <path_to_location>\sql\run_queries_enrollment.sql 
+	psql> \i <path_to_location>\sql\run_queries_movie.sql
