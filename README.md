@@ -10,13 +10,30 @@ This repository is made to help students of the MAS DSE 201 course offered in Wi
 2. Once you installed the application, launch it and you should see a small elephant on your toolbar (see screenshot). ![alt tag](./images/postgres_app.jpg))
 3. Click on "Open psql" and you are presented with an interactive shell you can use for SQL commands.
 
+##### PgAdmin installation
+
+The above installation only provides a command line interface for PostgreSQL. For those who prefer a Graphical User Interface, follow these steps to install PgAdmin. Note that you still need to complete the steps above to install PostgreSQL itself.
+
+1. Download PgAdmin [here](https://ftp.postgresql.org/pub/pgadmin3/release/v1.20.0/osx/pgadmin3-1.20.0.dmg).
+2. Open PgAdmin in click on the Connect button in the top right corner (looks like a plug).
+3. Configure PgAdmin as follows (replacing `julestestard` by your MacOS username) then click OK (don't put a password) : ![alt tag](./images/pgadmin-config.png)
+4. Back to the main page, you should see a `<your_username>` server with a `<your_username>` database. If the server is shown with a cross onto it, just double click it (this should start the connection). ![alt tag](./images/pgadmin-menu.png)
+5. You're good to go! I suggest following online guides on PgAdmin for further details about the GUI.
+
 ### Linux (Ubuntu)
 
 1. The first step is to install postgres with the following PostgreSQL as follows : run `sudo apt-get install postgresql` on the terminal. Verify that the installed version of PostgreSQL. The version number shouldn't matter as long as it's fairly recent (version 9.0+).
 2. Run `sudo -u postgres createuser -s <username>` on the terminal. By default, the PostgreSQL installation will install a user called `postgres` which will have the administrator role (highest level of privilege). In our case, it is OK to have our own user be a super user as well. This command creates a new user (which bears our own name) and gives it administrator powers.
 3. Run `createdb <username>` on the terminal. This will create a database whose name is the same as our own name.
 4. Run `psql` on the terminal and you will have a client session to your database. Note that `psql` is a shorthand for `psql -U <username> -d <username>`, which means "create a client connection to the database \<username> as user \<username>".
-5. 
+
+##### PgAdmin Installation
+
+The above installation only provides a command line interface for PostgreSQL in Linux. For those who prefer a Graphical User Interface, follow these steps to install PgAdmin. Note that you still need to complete the steps above to install PostgreSQL itself.
+
+1. The first step is to install PgAdmin. For this, just run `sudo apt-get install pgadmin3` on the terminal.
+2. Follow steps 2-5 found on the MacOS PgAdmin install.
+
 
 ### Windows
 1. Download [Postgresql 9.4](http://www.enterprisedb.com/products-services-training/pgdownload#windows) 
